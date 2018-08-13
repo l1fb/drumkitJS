@@ -6,7 +6,7 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  
+
   <div class="keys">
     <div class="keys1">
       <div data-key="65" class="key">
@@ -51,7 +51,7 @@
       </div>
     </div>
     
-    <audio data-key="65" src="sounds/clap.wav"></audio>
+  <audio data-key="65" src="sounds/clap.wav"></audio>
   <audio data-key="83" src="sounds/hihat.wav"></audio>
   <audio data-key="68" src="sounds/kick.wav"></audio>
   <audio data-key="70" src="sounds/openhat.wav"></audio>
@@ -62,7 +62,10 @@
   <audio data-key="76" src="sounds/tink.wav"></audio>
 
 <script>
-
+  window.addEventListener('keydown', function(e) {
+    const audio = document.querySelector(`audio[data-key="${e.keyCode}"]`)
+    console.log(audio);
+  })
 </script>
 
 
